@@ -40,6 +40,34 @@ app.post("/hotel", async (request, response) => {
   }
 });
 
+app.put("/hotel/:id", async (request, response) => {
+  const { id } = request.params;
+  const { checkInDate, checkOutDate, name, numberOfGuests, roomType } =
+    request.body;
+  try {
+    const updateReserve = await prisma.hotel.update({
+      where: {
+        id,
+      },
+      data: {
+        checkInDate,
+        checkOutDate,
+        name,
+        numberOfGuests,
+        roomType,
+      },
+    });
+    return response
+      .status(200)
+      .json({ message: "Atualizou a reserva", error: false });
+  } catch (error) {
+    console.error("Erro ao atualizar reserva", error);
+    return response
+      .status(500)
+      .json({ message: "Erro ao atualizar", error: true });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta: ${PORT}!`);
 });
