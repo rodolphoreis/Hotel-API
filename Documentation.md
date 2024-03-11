@@ -1,7 +1,5 @@
 ## Documentação da API
 
-Para mais informações sobre como utilizar a API, consulte a documentação em [API Documentation](#).
-
 ### Listar Reservas
 
 - **Endpoint**: `/hotel`
