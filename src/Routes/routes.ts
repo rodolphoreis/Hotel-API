@@ -39,7 +39,13 @@ routes.put("/hotel/:id", async (request, response) => {
   const { id } = request.params;
   const { checkInDate, checkOutDate, name, numberOfGuests, roomType } =
     request.body;
+
   try {
+    const reserve = await prisma.hotel.findUnique({
+      where: { id },
+    });
+    if (!reserve) return response.status(404).json("Reserva não encontrada!");
+
     const updateReserve = await prisma.hotel.update({
       where: {
         id,
