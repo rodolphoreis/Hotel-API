@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "d0e45056-8637-4541-8e09-37b3bc495f5b",
+		"name": "Reserve Hotel",
+		"description": "A API de Hotel é uma aplicação desenvolvida em Node.js com Prisma e TypeScript, que oferece um sistema de reservas eficiente e seguro para um único hotel. Permite operações de reserva de quartos de forma intuitiva e confiável.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31156393"
+	},
+	"item": [
+		{
+			"name": "read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/hotel"
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"checkInDate\": \"2024-03-12\",\n    \"checkOutDate\":\"2024-03-20\",\n    \"name\": \"Rodolpho Reis\",\n    \"numberOfGuests\": 3,\n    \"roomType\": \"master\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/hotel"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Fernanda Gaspar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/hotel/7581c930-0804-4e17-a495-309cac961da6"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/hotel/7581c930-0804-4e17-a495-309cac961da6"
+			},
+			"response": []
+		}
+	]
+}
