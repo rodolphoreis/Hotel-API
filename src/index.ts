@@ -68,6 +68,21 @@ app.put("/hotel/:id", async (request, response) => {
   }
 });
 
+app.delete("/hotel/:id", async (request, response) => {
+  const { id } = request.params;
+  try {
+    await prisma.hotel.delete({
+      where: {
+        id,
+      },
+    });
+    return response.sendStatus(204);
+  } catch (error) {
+    console.error({ message: "Erro ao deletar reserva", error });
+    return response.status(500).json({ message: error, error: true });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta: ${PORT}!`);
 });
