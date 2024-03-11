@@ -75,3 +75,5 @@ routes.delete("/hotel/:id", async (request, response) => {
     return response.status(500).json({ message: error, error: true });
   }
 });
+
+export default routes;
