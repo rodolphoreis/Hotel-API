@@ -15,6 +15,20 @@ A API de Hotel é uma aplicação desenvolvida em Node.js com Prisma e TypeScrip
 - TypeScript
 - PostgreSQL
 
+## Documentação da API
+
+Para mais informações sobre como utilizar a API, consulte a documentação em [API Documentation](#).
+
+### Testes com Postman
+
+Você pode testar a API utilizando o Postman. Siga os passos abaixo:
+
+1. Faça o download e instale o [Postman](https://www.postman.com/downloads/).
+2. Importe a coleção de requisições do Postman [aqui](https://github.com/rodolphoreis/Hotel-API/blob/main/Reserve%20Hotel.postman_collection.json).
+3. Abra o Postman e importe a coleção clicando em `File` > `Importar` e selecione o arquivo da coleção.
+4. Agora você pode executar as requisições na API usando o Postman.
+
+
 ## Instalação e Uso
 1. Clone o repositório.
 2. Instale as dependências usando `npm install`.
