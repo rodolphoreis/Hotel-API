@@ -17,7 +17,7 @@ A API de Hotel é uma aplicação desenvolvida em Node.js com Prisma e TypeScrip
 
 ## Documentação da API
 
-Para mais informações sobre como utilizar a API, consulte a documentação em [API Documentation](https://github.com/rodolphoreis/Hotel-API/blob/main/Documentation.md).
+Para mais informações sobre como utilizar a API, consulte a documentação em [API Documentation](https://github.com/rodolphoreis/Hotel-API/blob/main/Postman/Documentation.md).
 
 ### Testes com Postman
 
